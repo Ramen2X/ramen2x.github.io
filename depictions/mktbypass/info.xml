@@ -1,0 +1,18 @@
+<package>
+	<id>mktbypass</id>
+	<name>Full Package</name>
+	<version>1.0.0</version>
+	<compatibility>
+		<firmware>
+			<miniOS>10.0</miniOS>
+		</firmware>
+	</compatibility>
+	<dependencies>
+		<package>mobilesubstrate</package>
+	</dependencies>
+	<shortDescription>Bypasses JB detection in Mario Kart Tour</shortDescription>
+	<descriptionlist>
+		<description>This tweak will bypass JB detection in Mario Kart Tour (2.0.1).
+		</description>
+	</descriptionlist>
+</package>
