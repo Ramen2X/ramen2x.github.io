@@ -1,5 +1,9 @@
 <changelog>
 	<changes>
+		<version>2.0.2</version>
+		<change>Added support for Mario Kart Tour version 2.10.2.</change>
+	</changes>
+	<changes>
 		<version>2.0.1</version>
 		<change>Added support for Mario Kart Tour version 2.10.1.</change>
 	</changes>
