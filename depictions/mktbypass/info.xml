@@ -10,12 +10,8 @@
 	<dependencies>
 		<package>mobilesubstrate</package>
 	</dependencies>
-	<shortDescription>Bypasses JB detection in Mario Kart Tour</shortDescription>
-	<descriptionlist>
-		<description>This tweak will bypass JB detection in Mario Kart Tour (2.13.0).
-		</description>
-	</descriptionlist>
+	<shortDescription>A lightweight tweak to bypass JB detection in Mario Kart Tour</shortDescription>
 	<changelog>
-        <change>Added support for Mario Kart Tour version 2.13.0.</change>
+		<change>Added support for Mario Kart Tour version 2.13.0.</change>
 	</changelog>
 </package>

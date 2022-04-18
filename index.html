@@ -4,34 +4,43 @@
   <title>Ramen's Repo</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="depictions/bootstrap.min.css">
+  <link rel="stylesheet" href="depictions/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
 
 <div class="container">
-	<h1>Ramen's Repo</h1>
+	<h1 style="text-align:center;"><b> Ramen's Repo</b></h1>
 </div>
 
 <div class="container">
-	<div class="well">
-		<p><span class="text-primary"><b>Welcome to Ramen's repo.</b></p>
-		<a class="btn btn-sm btn-default" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://ramen2x.github.io/">Add to Cydia</a>
-		<a class="btn btn-sm btn-default" href="zbra://sources/add/https://ramen2x.github.io/">Add to Zebra</a>
+	<div class="card">
+		<div class="card-body text-center">
+			<p>Welcome to Ramen's Repo</p>
+			<a class="btn btn-sm btn-primary" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://ramen2x.github.io/"> Add to Cydia</a>
+			&nbsp;&nbsp;
+			<a class="btn btn-sm btn-primary" href="zbra://sources/add/https://ramen2x.github.io/">Add to Zebra</a>
+		</div>
 	</div>
 </div>
-
+<p></p>
 <div class="container">
-  <h3 id="wells" class="page-header">Featured Packages</h3>
+  <h3 id="wells" class="page-header text-center">Featured Packages</h3>
 </div>
 
 <div class="container">
-	<div class="panel panel-default">
-	  <div class="panel-heading">MKTBypass</div>
-	  <div class="panel-body">
-		This tweak will bypass JB detection in Mario Kart Tour (2.13.0).<br /><br />
-		<a class="btn btn-xs btn-default" href="depictions/?p=mktbypass">More info</a>
-	  </div>
+	<div class="card">
+		<div class="card-header text-center">
+			MKTBypass
+		</div>
+		<div class="card-body text-center">
+		  <p class="card-text">This tweak will bypass JB detection in Mario Kart Tour (2.13.0).</p>
+		  <a class="btn btn-xs btn-primary" href="depictions/?p=mktbypass">More Info</a>
+		</div>
 	</div>
+
+</div>
+
 </body>
 </html>

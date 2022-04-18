@@ -46,10 +46,11 @@ Twitter - @TimonOlsthoorn
 
 
 // changed const to var for IE9/10 compatibity.
-var VERSION_CHECK_SUPPORTED = "Your iOS version is supported! &#x1f60a;";
-var VERSION_CHECK_NEEDS_UPGRADE = "Requires at least iOS %s &#x1f615;";
-var VERSION_CHECK_UNCONFIRMED = "Not yet tested on iOS %s &#x1f601;";
-var VERSION_CHECK_UNSUPPORTED = "Only compatible with iOS %s to %s &#x1f61e;";
+var VERSION_CHECK_SUPPORTED = "Your iOS version is supported!";
+var VERSION_CHECK_NEEDS_UPGRADE = "Requires at least iOS %s";
+var VERSION_CHECK_UNCONFIRMED = "Not yet tested on iOS %s";
+var VERSION_CHECK_UNSUPPORTED = "Only compatible with iOS %s to %s";
+var VERSION_CHECK_INFO = "Your iOS version is %s";
 
 function ios_version_check(minIOS,maxIOS,otherIOS,callBack) {
 	"use strict";
@@ -108,18 +109,24 @@ function ios_version_check(minIOS,maxIOS,otherIOS,callBack) {
 		message = VERSION_CHECK_SUPPORTED,
 		isBad = false;
 
-	if (compareVersions(minVersion, osVersion) == 1) {
-		message = VERSION_CHECK_NEEDS_UPGRADE.replace("%s", minString);
-		isBad = true;
-	} else if (maxVersion && compareVersions(maxVersion, osVersion) == -1) {
-		if ("unsupported" == otherIOS) {
-			message = VERSION_CHECK_UNSUPPORTED.replace("%s", minString).replace("%s", maxString);
-		} else {
-			message = VERSION_CHECK_UNCONFIRMED.replace("%s", osString);
-		}
+	if (minString) {
+		if (compareVersions(minVersion, osVersion) == 1) {
+			message = VERSION_CHECK_NEEDS_UPGRADE.replace("%s", minString);
+			isBad = true;
+		} else if (maxVersion && compareVersions(maxVersion, osVersion) == -1) {
+			if ("unsupported" == otherIOS) {
+				message = VERSION_CHECK_UNSUPPORTED.replace("%s", minString).replace("%s", maxString);
+			} else {
+				message = VERSION_CHECK_UNCONFIRMED.replace("%s", osString);
+			}
 
-		isBad = true;
+			isBad = true;
+		}
 	}
+	else {
+		message = VERSION_CHECK_INFO.replace("%s", osString);
+	}
+
 	callBack(message,isBad);
 
 	return (isBad?-1:1);

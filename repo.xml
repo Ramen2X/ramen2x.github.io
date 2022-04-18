@@ -1,1 +1,9 @@
-
+<repo>
+	<footerlinks>
+		<link>
+			<name>Check out my GitHub!</name>
+			<url>https://github.com/Ramen2X</url>
+			<iconclass>fa fa-github</iconclass>
+		</link>
+	</footerlinks>
+</repo>
